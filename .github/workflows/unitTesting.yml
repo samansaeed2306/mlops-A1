@@ -1,10 +1,7 @@
 name: Unit Testing
 
 on:
-  workflow_run:
-    workflows: ["Code Quality"]
-    types:
-      - completed
+  push:
     branches:
       - dev
 
