@@ -5,6 +5,8 @@ on:
     workflows: ["Code Quality"]
     types:
       - completed
+    branches:
+      - dev
 
 jobs:
   unittest:
