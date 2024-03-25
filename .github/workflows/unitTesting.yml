@@ -1,7 +1,7 @@
 name: Unit Testing
 
 on:
-  pull_request:
+  push:
     branches:
       - dev
 
@@ -10,18 +10,13 @@ jobs:
     name: Unit Testing
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Install dependencies
+          pip install pytest  
+          pip install flask
+          pip install scikit-learn
+          pip install joblib
 
       - name: Run Tests with Pytest
-        run: pytest
+        run: pytest test_train_model.py
