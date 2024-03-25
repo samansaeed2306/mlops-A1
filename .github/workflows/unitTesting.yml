@@ -10,7 +10,7 @@ jobs:
   unittest:
     name: Unit Testing
     runs-on: ubuntu-latest
-    needs: codequality
+    # needs: codequality
     steps:
       - name: Install Dependencies
         run: |
