@@ -19,4 +19,5 @@ jobs:
           pip install joblib
 
       - name: Run Tests with Pytest
-        run: pytest
+        run: |
+          pytest
