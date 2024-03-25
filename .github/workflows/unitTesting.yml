@@ -19,4 +19,4 @@ jobs:
           pip install joblib
 
       - name: Run Tests with Pytest
-        run: pytest test_train_model.py
+        run: pytest
