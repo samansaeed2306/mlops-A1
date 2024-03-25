@@ -2,7 +2,7 @@ name: Unit Testing
 
 on:
   workflow_run:
-    workflows: ["Code Quality"]
+    workflows: ["codeQuality"]
     types:
       - completed
 
