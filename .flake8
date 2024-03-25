@@ -1,0 +1,14 @@
+# Example .flake8 configuration file for a machine learning project
+
+[flake8]
+# Set the maximum line length to 120 characters
+max-line-length = 120
+
+# Ignore certain errors or warnings
+ignore = E203, E266, E501, W503, F821
+
+# Exclude certain directories or files from linting
+exclude = .git,__pycache__,venv
+
+# Enable Flake8 plugins for additional checks
+plugins = flake8-naming, flake8-comprehensions, flake8-mccabe, flake8-docstrings, flake8-import-order
