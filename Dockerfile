@@ -4,7 +4,7 @@ FROM python:3.8-slim AS base
 WORKDIR /app
 
 # Copy the contents of the src directory into the container
-COPY src /app
+COPY . /app
 
 # Copy the requirements file
 COPY requirements.txt /app/requirements.txt
