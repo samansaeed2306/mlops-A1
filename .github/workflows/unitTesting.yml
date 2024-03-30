@@ -1,0 +1,31 @@
+name: Unit Testing
+
+on:
+  pull_request:
+    branches:
+      - dev
+
+jobs:
+  unittest:
+    name: Unit Testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Assuming you have a requirements.txt file that lists all dependencies including pytest
+
+      - name: Navigate to Root Directory
+        run: cd $GITHUB_WORKSPACE
+
+      - name: Run Tests with Pytest
+        run: |
+          pytest
