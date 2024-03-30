@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    docker.build('mlops_a1:latest', '-f Dockerfile .')
+                    docker.build('mlops_a1:latest', '.')
                 }
             }
         }
